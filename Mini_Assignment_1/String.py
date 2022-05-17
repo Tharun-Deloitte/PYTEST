@@ -21,6 +21,26 @@ class SearchCommonElements(StringClass):
         str3 = list(set(str1) & set(str2))
         print(str3)
 
+class EqualSumPairs():
+
+    def pair(self,test_list):
+        uniqueSums=[]
+        result = [sum((int(n),int(j))) for idx,n in enumerate(test_list) for j in test_list[idx+1:]]
+        print(result)
+        n=len(result)
+        sums = dict()
+
+        for num in range(n):
+            if result[num] in sums.keys():
+                sums[result[num]] += 1
+            else:
+                sums[result[num]] = 1
+        for num in sums:
+            if sums[num] == 1:
+                uniqueSums.append(num)
+        print(uniqueSums)
+        print(len(uniqueSums))
+
 
 string1=input("Enter a string :")
 object1=StringClass(string1)
@@ -28,11 +48,13 @@ print(object1.list())
 print(object1.length())
 list1=object1.list()
 
-object2=PairsPossible(object1)
-object2.pair(list1)
+pairs=PairsPossible(object1)
+pairs.pair(list1)
 
 string2=input("Enter string to compare :")
-object3=SearchCommonElements(list1)
-object3.common(string1,string2)
+compare=SearchCommonElements(list1)
+compare.common(string1,string2)
 
-
+print('sum of pairs')
+uniquesum=EqualSumPairs()
+uniquesum.pair(list1)
