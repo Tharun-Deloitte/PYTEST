@@ -29,7 +29,6 @@ class EqualSumPairs():
         print(result)
         n=len(result)
         sums = dict()
-
         for num in range(n):
             if result[num] in sums.keys():
                 sums[result[num]] += 1
