@@ -22,7 +22,6 @@ class SearchCommonElements(StringClass):
         print(str3)
 
 
-
 string1=input("Enter a string :")
 object1=StringClass(string1)
 print(object1.list())
