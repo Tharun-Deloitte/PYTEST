@@ -1,0 +1,31 @@
+import Admin
+
+
+class BaseClass:
+
+    def main(self):
+        while True:
+            print("\t\t_________________________________________")
+            print("\t\t\t -------Main Screen-------")
+            print("\t\t_________________________________________")
+            print("\t\t\t1-> Admin")
+            print("\t\t\t2-> RegisterUser")
+            print("\t\t\t3-> Userlogin")
+            print("\t\t\t4-> Exit")
+            choice1 = int(input("\t\t\tEnter your choice(1/2/3/4):-"))
+            if choice1 == 1:
+                am = Admin.Admin()
+                am.adminscreen()
+            elif choice1 == 2:
+                pass
+
+            elif choice1 == 3:
+                pass
+            elif choice1 == 4:
+                exit()
+            else:
+               print("Invalid input")
+
+
+Bc = BaseClass()
+Bc.main()
