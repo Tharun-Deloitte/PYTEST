@@ -28,7 +28,7 @@ class User:
             i += 1
         for k in range(len(final)):
             for j in range(len(final[k])):
-                if(final[k][j]==self.email and final[k][j+1]==self.password):
+                if(final[k][j]==self.email and final[k][j+2]==self.password):
                     flag=1
                     print("login successfully")
                     print("--------------------------------")
