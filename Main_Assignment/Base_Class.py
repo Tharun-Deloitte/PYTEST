@@ -1,7 +1,8 @@
 import Admin
+import Register
+import User
 
-
-class BaseClass:
+class Base_Class:
 
     def main(self):
         while True:
@@ -17,15 +18,16 @@ class BaseClass:
                 am = Admin.Admin()
                 am.adminscreen()
             elif choice1 == 2:
-                pass
-
+                r=Register.Register()
+                r.user_register()
             elif choice1 == 3:
-                pass
+                u=User.User()
+                u.user_login()
             elif choice1 == 4:
                 exit()
             else:
                print("Invalid input")
 
 
-Bc = BaseClass()
-Bc.main()
+Bs = Base_Class()
+Bs.main()
